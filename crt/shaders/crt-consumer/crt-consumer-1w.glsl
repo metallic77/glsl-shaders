@@ -161,7 +161,7 @@ void main() {
     float infl = mix(SCAN_LOW, SCAN_HIGH, l);
     float infl2 = mix(MASK_LOW, MASK_HIGH, l);
 
-    float scan = infl * sin((uv.y * TextureSize.y) * TAU);
+    float scan = infl * sin((uv.y * TextureSize.y-0.25) * TAU);
     float msk = infl2 * sin(maskpos.x * PI);
     
     col += col * scan;
